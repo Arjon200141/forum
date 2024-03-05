@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReTro Forum</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+</head>
+<body class="font-mulish mt-8 ">
+    <header class="mx-4 lg:mx-24">
+        <!--NavBar-->
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <a class="btn btn-ghost text-2xl lg:text-4xl font-black">ReTro</a>
+            </div>
+            <div class="navbar-end gap-3">
+              <a class="btn btn-circle tooltip tooltip-close tooltip-top p-3" data-tip="Home"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+              </svg>
+              </a>
+              <a class="btn btn-circle tooltip tooltip-close tooltip-top p-3" data-tip="Edit"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+              </svg>
+              </a>
+              <a class="btn btn-circle tooltip tooltip-close tooltip-top p-3" data-tip="Add"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+              </svg>
+              </a>
+              <a class="btn btn-circle tooltip tooltip-close tooltip-top p-3" data-tip="Bookmark"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
+              </svg>
+              </a>
+              <button class="btn btn-info bg-[#797DFC] rounded-[46px] px-8 text-[#FFFFFF] font-bold text-xl">Sign In</button>
+            </div>
+        </div>
+
+        <!--Banner-->
+
+          <div class="flex flex-col lg:flex-row justify-center items-center">
+            <div class="hero min-h-screen bg-[#12132D] rounded-xl"
+                style="background-image: url(images/bgbanner.png);">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class="hero-content text-start text-neutral-content">
+                    <div class="max-w-md">
+                        <h1 class="mb-4 text-3xl lg:text-5xl font-black">Welcome to the<br><span
+                                class="text">ReTro</span> Forum</h1>
+                        <p class="mb-4">Share your favorite opinion and win a WP forum coffee mug!</p>
+                        <div class="lg:bg-white rounded-full pt-1 pr-2">
+                            <input type="text" placeholder="Search here anything" name="" id="search-feild"
+                                class="rounded-l-full lg:pl-14 py-4 text-sm lg:text-xl">
+                            <button onclick="searchHandler()"
+                                class="btn btn-info bg-[#797DFC] rounded-full px-4 lg:px-8 text-[#FFFFFF] font-bold text-sm lg:text-xl">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+   
+               <div class=" bg-white rounded-xl max-w-full p-6 mt-8 lg:ml-16 space-y-4">
+                 <div class="flex justify-between gap-8 ">
+                  <p class="text-black text-2xl font-medium">Registered Users</p>
+                  <p class="text-black text-2xl font-medium">01</p>
+                 </div>
+                 <div class="flex justify-between gap-8 ">
+                   <p class="text-black text-2xl font-medium">Forum</p>
+                   <p class="text-black text-2xl font-medium">05</p>
+                 </div>
+                 <div class="flex justify-between gap-8 ">
+                   <p class="text-black text-2xl font-medium">Topics</p>
+                   <p class="text-black text-2xl font-medium">01</p>
+                 </div>
+                 <div class="flex justify-between gap-8 ">
+                   <p class="text-black text-2xl font-medium">Replies</p>
+                   <p class="text-black text-2xl font-medium">01</p>
+                 </div>
+               </div>
+              </div>
+             </div>
+             </div>
+          </div>
+          <div id="spin-loader" class="my-8 lg:my-64 text-center flex justify-center items-center hidden">
+            <span class="loading loading-bars loading-xs"></span>
+            <span class="loading loading-bars loading-sm"></span>
+            <span class="loading loading-bars loading-md"></span>
+            <span class="loading loading-bars loading-lg"></span>
+          </div>
+    </header>
+
+    <main class="mt-8 mx-4 lg:mx-24">
+      <!--Let’s Discuss-->
+      <section>
+        <h2 class="font-black text-4xl text-center mb-3">Let's Discuss</h2>
+        <p class="text-[#12132D99] font-inter text-center mb-8">Yes, you can run unit tests and view the results directly within the app.The<br>integrated testing features allow for a streamlined .</p>
+
+
+        <div class="flex flex-col lg:flex-row gap-4">
+                  <!--Card-->
+                  <div class="flex flex-col gap-8" id="forum-container">
+                    
+                  </div>
+        
+                <!--title-->
+                <div class="flex justify-between bg-[#12132D0D] lg:w-96 h-min rounded-2xl px-4 py-6">
+                  <h2 class="font-bold text-xl text-[#12132D] font-mulish">Title</h2>
+                  <div class="flex flex-col">
+                      <div class="flex justify-between">
+                          <div>
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                  <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                                      clip-rule="evenodd" />
+                              </svg>
+                          </div>
+                          <p class="font-inter text-[#12132D99]">Mark as read (<span id="count">0</span>)</p>
+                      </div>
+              
+                      <!-- Append in list -->
+                      <div id="post-container">
+              
+                      </div>
+                  </div>
+              </div>
+              
+
+        </div>
+      </section>
+
+      <!--Join Our Forum-->
+      <section>
+      <div class="hero min-h-screen bg-[#12132D] rounded-[32px] px-14 my-16 ">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <img src="images/joinforum.png" class="max-w-full rounded-lg shadow-2xl" />
+          <div>
+            <h1 class="text-5xl font-black text-white">Join Our Forum</h1>
+            <p class="text-lg font-medium py-6 text-[#FFFFFFCC]">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app. </p>
+            <button class="btn btn-primary font-bold text-2xl bg-[#797DFC] rounded-[32px] text-white px-6 py-2 my-3">Registered Now</button>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <!--Latest Posts-->
+      <section>
+        <h2 class="text-4xl font-black text-center text-[#12132D] mb-2">Latest Posts</h2>
+        <p class="font-inter text-lg text-center text-[#12132D99] mb-5">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6" id="latest-post-container">
+
+        </div>
+
+      </section>
+    </main>
+
+    <footer class="footer footer-center p-8 lg:p-16 bg-[#12132D0D] text-base-content rounded mt-8 lg:mt-12">
+      <h2 class="font-black text-4xl text-center font-mulish">ReTro</h2>
+      <p class="text-[#12132DB3] text-center">Discover a haven for knowledge enthusiasts! Join our forum to explore diverse topics, seek advice, <br> and connect with like-minded individuals in an intellectually stimulating environment.</p>
+      <nav>
+        <div class="grid grid-flow-col gap-4">
+          <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
+          <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
+          <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+          <a><svg width="23.066406" height="22.398926" viewBox="0 0 23.0664 22.3989" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <desc>
+                Created with Pixso.
+            </desc>
+            <defs/>
+            <path id="Vector" d="M11.5332 0C5.14188 0 0 5.11731 0 11.4781C0 16.5476 3.3158 20.8519 7.88101 22.3823C8.45767 22.478 8.6499 22.1432 8.6499 21.8085C8.6499 21.5215 8.6499 20.8041 8.6499 19.8477C5.43021 20.5649 4.75745 18.3171 4.75745 18.3171C4.22885 16.978 3.45996 16.6433 3.45996 16.6433C2.40274 15.9259 3.55606 15.9259 3.55606 15.9259C4.70938 16.0216 5.33411 17.1216 5.33411 17.1216C6.34326 18.8911 8.02518 18.365 8.69797 18.078C8.79407 17.3129 9.0824 16.8346 9.41879 16.5476C6.87186 16.2607 4.18079 15.2563 4.18079 10.8564C4.18079 9.61292 4.61328 8.56079 5.38217 7.79553C5.28604 7.50867 4.85355 6.36084 5.47827 4.73474C5.47827 4.73474 6.43936 4.44775 8.6499 5.93042C9.56296 5.69128 10.5721 5.54773 11.5332 5.54773C12.4943 5.54773 13.5035 5.69128 14.4165 5.93042C16.627 4.44775 17.5881 4.73474 17.5881 4.73474C18.2129 6.31299 17.8284 7.46082 17.6843 7.79553C18.4051 8.60864 18.8856 9.61292 18.8856 10.8564C18.8856 15.2563 16.1945 16.2129 13.5996 16.4998C14.0321 16.8346 14.3685 17.552 14.3685 18.6041C14.3685 20.1345 14.3685 21.3781 14.3685 21.7606C14.3685 22.0476 14.5607 22.4302 15.1854 22.3345C19.7506 20.8519 23.0664 16.5476 23.0664 11.4781C23.0664 5.11731 17.9245 0 11.5332 0Z" fill="#12132D" fill-opacity="1.000000" fill-rule="evenodd"/>
+          </svg>
+          </a>
+          <a><svg width="24.114014" height="24.000000" viewBox="0 0 24.114 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <desc>
+                Created with Pixso.
+            </desc>
+            <defs/>
+            <path id="Vector" d="M12.057 2.16223C15.2762 2.16223 15.6575 2.17419 16.9292 2.23193C17.6938 2.24121 18.4512 2.38098 19.1684 2.64502C19.6884 2.8446 20.1608 3.15039 20.5549 3.54272C20.9491 3.93494 21.2563 4.40503 21.4569 4.92261C21.7222 5.63635 21.8626 6.39014 21.872 7.15112C21.9294 8.41675 21.942 8.79614 21.942 12C21.942 15.2039 21.93 15.5833 21.872 16.8489C21.8626 17.6099 21.7222 18.3636 21.4569 19.0774C21.2563 19.595 20.9491 20.0651 20.5549 20.4573C20.1608 20.8496 19.6884 21.1554 19.1684 21.355C18.4512 21.619 17.6938 21.7588 16.9292 21.7681C15.6581 21.8252 15.2768 21.8378 12.057 21.8378C8.83722 21.8378 8.45599 21.8258 7.18484 21.7681C6.4202 21.7588 5.66284 21.619 4.94568 21.355C4.4256 21.1554 3.95328 20.8496 3.55911 20.4573C3.16495 20.0651 2.8577 19.595 2.65714 19.0774C2.39178 18.3636 2.25137 17.6099 2.24203 16.8489C2.18463 15.5833 2.172 15.2039 2.172 12C2.172 8.79614 2.18405 8.41675 2.24203 7.15112C2.25137 6.39014 2.39178 5.63635 2.65714 4.92261C2.8577 4.40503 3.16495 3.93494 3.55911 3.54272C3.95328 3.15039 4.4256 2.8446 4.94568 2.64502C5.66284 2.38098 6.4202 2.24121 7.18484 2.23193C8.45657 2.1748 8.8378 2.16223 12.057 2.16223ZM12.057 0C8.78439 0 8.37216 0.0136719 7.08609 0.0720215C6.08539 0.0917969 5.09531 0.280396 4.15796 0.629639C3.35385 0.931152 2.62555 1.40369 2.02386 2.01416C1.40988 2.61328 0.934692 3.3385 0.631561 4.13928C0.280579 5.07214 0.091095 6.0575 0.0711975 7.05334C0.0137939 8.33215 0 8.74243 0 11.9994C0 15.2565 0.0137939 15.6666 0.0723572 16.9467C0.0922546 17.9425 0.281708 18.9279 0.632721 19.8607C0.935516 20.6614 1.41028 21.3866 2.02386 21.9858C2.62589 22.5964 3.35458 23.069 4.15909 23.3704C5.09644 23.7196 6.08652 23.9082 7.08722 23.928C8.37332 23.9851 8.78381 24 12.0582 24C15.3325 24 15.743 23.9863 17.0291 23.928C18.0298 23.9082 19.0199 23.7196 19.9572 23.3704C20.7579 23.0614 21.485 22.5896 22.092 21.9851C22.6991 21.3806 23.1726 20.6567 23.4825 19.8596C23.8335 18.9268 24.0229 17.9414 24.0428 16.9454C24.1003 15.6666 24.114 15.2565 24.114 11.9994C24.114 8.74243 24.1003 8.33215 24.0417 7.05225C24.0218 6.05627 23.8323 5.07092 23.4813 4.13806C23.1785 3.3374 22.7037 2.61218 22.0902 2.01306C21.4881 1.40234 20.7594 0.929932 19.9549 0.62854C19.0176 0.279175 18.0275 0.0906982 17.0268 0.0708008C15.7419 0.0136719 15.3296 0 12.057 0Z" fill="#12132D" fill-opacity="1.000000" fill-rule="nonzero"/>
+            <path id="Vector" d="M12.0548 5.83789C10.8303 5.83789 9.63321 6.19934 8.61499 6.87634C7.5968 7.55347 6.80322 8.51587 6.33459 9.64185C5.86597 10.7677 5.74335 12.0067 5.98224 13.202C6.22116 14.3973 6.81085 15.4954 7.67676 16.3571C8.54266 17.2189 9.64587 17.8057 10.8469 18.0435C12.048 18.2812 13.2929 18.1592 14.4243 17.6929C15.5556 17.2264 16.5226 16.4366 17.2029 15.4233C17.8833 14.4099 18.2464 13.2186 18.2464 11.9999C18.2464 10.3656 17.5941 8.79834 16.433 7.6427C15.2718 6.48706 13.697 5.83789 12.0548 5.83789ZM12.0548 15.9996C11.2599 15.9996 10.4829 15.7651 9.82202 15.3256C9.16107 14.8861 8.64597 14.2615 8.34177 13.5305C8.0376 12.7997 7.95801 11.9955 8.11307 11.2196C8.26813 10.4437 8.65091 9.73096 9.21298 9.17163C9.77505 8.61218 10.4912 8.2312 11.2708 8.0769C12.0504 7.92261 12.8585 8.00183 13.5929 8.30457C14.3272 8.6073 14.9549 9.12 15.3965 9.77771C15.8381 10.4354 16.0739 11.2087 16.0739 11.9999C16.0739 13.0607 14.8967 14.8281 14.8967 14.8281C14.8967 14.8281 13.1208 15.9996 12.0548 15.9996Z" fill="#12132D" fill-opacity="1.000000" fill-rule="nonzero"/>
+            <path id="Vector" d="M19.9387 5.59424C19.9387 6.38953 19.291 7.03418 18.4919 7.03418C17.6928 7.03418 17.045 6.38953 17.045 5.59424C17.045 4.79895 17.6928 4.1543 18.4919 4.1543C19.291 4.1543 19.9387 4.79895 19.9387 5.59424Z" fill="#12132D" fill-opacity="1.000000" fill-rule="evenodd"/>
+          </svg>
+          </a>
+        </div>
+      </nav> 
+      
+      <aside class="border-t-2 border-solid">
+        <p class="text-[#12132D80] font-light">Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+      </aside>
+    </footer>
+
+
+
+    <script src="js/app.js"></script>
+</body>
+</html>
